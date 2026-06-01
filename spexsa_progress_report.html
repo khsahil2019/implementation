@@ -711,6 +711,142 @@
       color: var(--primary);
       text-decoration: none;
     }
+
+    /* Mobile Responsive Optimizations */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 16px 0;
+      }
+
+      .header-actions {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+      }
+
+      .header-actions .btn {
+        flex: 1;
+        justify-content: center;
+        padding: 10px;
+        font-size: 12px;
+      }
+
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .progress-widget {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+      }
+
+      .stats-summary-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .mini-badge-list {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .feature-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .badge-status {
+        align-self: flex-start;
+      }
+
+      .db-badge-list {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      }
+      
+      .tester-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 12px;
+      }
+
+      .card-panel {
+        padding: 16px;
+      }
+
+      .feature-item-card {
+        padding: 16px;
+      }
+
+      .brand-name h1 {
+        font-size: 18px;
+      }
+
+      .progress-svg-container {
+        width: 120px;
+        height: 120px;
+      }
+
+      .progress-svg-container svg {
+        width: 120px;
+        height: 120px;
+      }
+
+      .progress-svg-circle-bg, .progress-svg-circle-fill {
+        cx: 60 !important;
+        cy: 60 !important;
+        r: 52 !important;
+        stroke-width: 10 !important;
+      }
+
+      .progress-svg-circle-fill {
+        stroke-dasharray: 327 !important;
+        stroke-dashoffset: 98 !important;
+        animation: progressAnimMobile 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+      }
+
+      @keyframes progressAnimMobile {
+        from {
+          stroke-dashoffset: 327;
+        }
+        to {
+          stroke-dashoffset: 98;
+        }
+      }
+
+      .progress-num {
+        font-size: 26px;
+      }
+
+      .portal-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .tab-button {
+        padding: 8px 12px;
+        font-size: 11px;
+      }
+      
+      .meta-tag {
+        font-size: 10px;
+        padding: 3px 6px;
+      }
+    }
   </style>
 </head>
 <body>
